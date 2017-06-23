@@ -31,7 +31,7 @@ view ----- 项目的视图目录，专门用来存放各页面视图
 
 
 
-*组件：
+* 组件：
 
 Loading.vue ----- 加载动画
 
@@ -59,7 +59,7 @@ Copyright.vue ----- 项目版权
 
 
 
-*路由视图
+* 路由视图
 
 Home.vue ----- 首页
 
@@ -85,7 +85,7 @@ Intro.vue ----- 应用介绍
 
 
 
-*API数据来源
+* API数据来源
 
 豆瓣-电影API：
 https://developers.douban.com/wiki/?title=movie_v2
