@@ -9,17 +9,8 @@
 
 项目用到技术与插件：Vue2.0、Axios、Sass、Vue-Awesome-Swiper。
 
-# 安装项目依赖包和插件
+# 安装项目依赖包
 $ npm install
-
-$ npm install vue-router vue-resource --save
-
-$ npm install --save-dev sass-loader	
-$ npm install --save-dev node-sass
-
-$ npm install axios --save
-
-$ npm install vue-awesome-swiper --save
 
 # 启动项目 端口:1029
 $ npm run dev
@@ -37,6 +28,7 @@ components ----- 专门存放项目中的vue组件，包括公用组件、各页
 router ----- 路由目录，专门用来存放页面跳转路由文件
 
 view ----- 项目的视图目录，专门用来存放各页面视图
+
 
 #配置说明
 
