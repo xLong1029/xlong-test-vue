@@ -1,0 +1,268 @@
+  /*HTML文档常规设置*/
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+/*100 ÷ 16 × 100% = 625% 谷歌浏览器不兼容最小10px默认为12px，改成100px的相对字体大小可解决*/
+html{
+    font-size:625%;
+  }
+
+body {
+  width:100%;
+  -webkit-text-size-adjust:none;
+  color:$defaultFontColor;
+  font-family:"microsoft yahei","Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:normal;
+  background:#fff;
+  font-size:Rem(14px);
+  line-height:1.5;
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, nav, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    vertical-align:baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,nav,hgroup,menu,nav,section { 
+    display:block;
+}
+
+p{
+  margin-bottom:Rem(15px);
+}
+
+  
+/*设置列表标签通用样式*/
+ul, ol {
+    list-style: none;
+    list-style-image: none;
+
+  li {
+    list-style: none;
+  }
+}
+
+/*设置超链接标签通用样式*/
+a{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  background: transparent;
+  vertical-align: baseline;
+  color:#333;
+
+  &:hover{
+    color:$defaultFontColor;
+  }
+  
+  &.disabled {
+    cursor: default;
+  }
+}
+/*设置超链接标签通用样式*/
+img {
+    border: 0;
+  height: auto;
+  width: 100%;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* 设置输入框通用样式 */
+input[type="text"], input[type="password"], textarea{
+  border:$deepBorder;
+  outline: none;
+  width:100%;
+  margin-bottom:Rem(15px);
+  font-size:Rem(14px);
+  font-family:"microsoft yahei","Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  @each $props, $style in $borderRadius{
+    #{$props}: $style;
+  }
+}
+
+input[type="text"], input[type="password"]{
+  text-indent:10px;
+}
+
+textarea{
+  padding:Rem(10px);
+
+}
+
+button,input{
+  display:block;
+  outline: none;
+  font-size:Rem(14px);
+  height:HalfRem(70px);
+  line-height:HalfRem(70px);
+  font-family:"microsoft yahei","Helvetica Neue", Helvetica, Arial, sans-serif;
+  @each $props, $style in $borderRadius{
+    #{$props}: $style;
+  }
+}
+
+/* 设置按钮通用样式 */
+button, input[type="button"] ,input[type="submit"]{ 
+  border: none;
+  background:$mainColor;
+  color:#fff;
+  text-align:center;
+  cursor:pointer;
+}
+
+/* 设置浮动类型 */
+.fl{
+  float:left;}
+  
+.fr{
+  float:right;
+  }
+
+/* 设置清除浮动类型 */
+.clearfix:after{
+  clear: both;
+}
+.clearfix:before, .clearfix:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+/* page setting */
+.fullwidth{
+  width:100%;
+}
+
+.edge-frame{
+  padding-left:$edgeWidth;
+  padding-right:$edgeWidth;
+}
+
+.content{
+  margin-top:$navBarHeight;
+  margin-bottom:$tabBarHeight;
+}
+
+/* container */
+#container{
+  width:100%;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  overflow-x:hidden;
+}
+
+/* push-body */
+.push-body{
+  overflow-x:hidden;
+  position:relative;
+  left:0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.push-body-toright{
+  left:HalfRem(480px);
+}
+
+/* icon-list-next */
+.icon-list-next{
+  display:block;
+  float:right;
+  margin-top:HalfRem(26px);
+  // 因为是App.vue引用该公用样式，所以路径只需要./
+  background:url("./assets/images/icon-list-next.png") no-repeat;
+  background-size:100%;
+  width:HalfRem(18px);
+  height:HalfRem(30px);
+}
+
+/* layout */
+@media screen and (min-width: 375px) {
+  /* solution */
+  .solution-list{
+    .solution-desc{
+      width:68%;
+    }
+  }
+}
+
+@media screen and (min-width: 414px) {
+  // 动态修改字体大小
+  html{
+    font-size:690%; // 414/375*625%
+  }
+
+  /* solution */
+  .solution-list{
+    p{
+      font-size:Rem(14px);
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+  html{
+    font-size:800%; // 480/375*625%
+  }
+}
+
+@media screen and (min-width: 640px) {
+  html{
+    font-size:938%; // 1.5*625%
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* solution */
+  .solution-list{
+    .solution-desc{
+      width:70%;
+    }
+  }
+}
+
+@media screen and (min-width: 960px) {
+  body{
+    background:#eee;
+  }
+  
+  #container{
+    width:640px;
+  }
+
+  .edge-frame{
+    padding-left: HalfRem(30px);
+    padding-right: HalfRem(30px);
+  }
+
+  .push-body-toright {
+      left: 0;
+  }
+}
