@@ -86,7 +86,7 @@ Intro.vue ----- 应用介绍
 豆瓣-电影API：
 https://developers.douban.com/wiki/?title=movie_v2
 
-##联系方式
+##作者联系方式
 
 QQ：381612175
 
