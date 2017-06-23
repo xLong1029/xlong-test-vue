@@ -9,17 +9,8 @@
 
 项目用到技术与插件：Vue2.0、Axios、Sass、Vue-Awesome-Swiper。
 
-# 安装项目依赖包和插件
+# 安装项目依赖包
 $ npm install
-
-$ npm install vue-router vue-resource --save
-
-$ npm install --save-dev sass-loader	
-$ npm install --save-dev node-sass
-
-$ npm install axios --save
-
-$ npm install vue-awesome-swiper --save
 
 # 启动项目 端口:1029
 $ npm run dev
