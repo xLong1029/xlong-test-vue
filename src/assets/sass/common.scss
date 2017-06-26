@@ -171,6 +171,8 @@ button, input[type="button"] ,input[type="submit"]{
 /* container */
 #container{
   width:100%;
+  // vh是相对于视口的高度。视口被均分为100单位的vh
+  min-height:100vh;
   margin: 0 auto;
   background: #fff;
   position: relative;

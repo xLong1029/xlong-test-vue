@@ -51,10 +51,6 @@
         this.showTabBar = get.showTabBar;
         console.log('App.vue get showTabBar:'+this.showTabBar);
       })
-    },
-    mounted(){
-      //设置页面最小高度
-      this.$refs.container.style.minHeight = window.screen.availHeight + 'px';
     }
   }
 </script>
