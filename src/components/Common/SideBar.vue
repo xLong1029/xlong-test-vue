@@ -89,7 +89,7 @@
   }
 </script>
 
-<style lang="scss" scoped type="text/css">
+<style lang="scss" scoped>
   //引入通用设置文件
   @import "../../assets/sass/setting";
 

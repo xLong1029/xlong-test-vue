@@ -58,7 +58,7 @@
   }
 </script>
 
-<style lang="scss" type="text/css">
+<style lang="scss">
   //引入通用设置文件
   @import "../../assets/sass/setting";
 
