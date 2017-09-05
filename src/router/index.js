@@ -16,77 +16,77 @@ export default new VueRouter({
       path: '/home',
       name: 'Home',
       component: (resolve) => {
-        require(['@/view/Home/Home.vue'], resolve)
+        require(['@/pages/Home/Home.vue'], resolve)
       }
     },
     {
       path: '/about',
       name: 'About',
       component: (resolve) => {
-        require(['@/view/About/About.vue'], resolve)
+        require(['@/pages/About/About.vue'], resolve)
       }
     },
     {
       path: '/product',
       name: 'Product',
       component: (resolve) => {
-        require(['@/view/Product/Product.vue'], resolve)
+        require(['@/pages/Product/Product.vue'], resolve)
       }
     },
     {
       path: '/product/details',
       name: 'ProductDetails',
       component: (resolve) => {
-        require(['@/view/Product/ProductDetails.vue'], resolve)
+        require(['@/pages/Product/ProductDetails.vue'], resolve)
       }
     },
     {
       path: '/news',
       name: 'News',
       component: (resolve) => {
-        require(['@/view/News/News.vue'], resolve)
+        require(['@/pages/News/News.vue'], resolve)
       }
     },
     {
       path: '/news/details',
       name: 'NewsDetails',
       component: (resolve) => {
-        require(['@/view/News/NewsDetails.vue'], resolve)
+        require(['@/pages/News/NewsDetails.vue'], resolve)
       }
     },
     {
       path: '/contact',
       name: 'Contact',
       component: (resolve) => {
-        require(['@/view/Contact/Contact.vue'], resolve)
+        require(['@/pages/Contact/Contact.vue'], resolve)
       }
     },
     {
       path: '/search',
       name: 'Search',
       component: (resolve) => {
-        require(['@/view/Search/Search.vue'], resolve)
+        require(['@/pages/Search/Search.vue'], resolve)
       }
     },
     {
       path: '/result',
       name: 'SearchResult',
       component: (resolve) => {
-        require(['@/view/Search/SearchResult.vue'], resolve)
+        require(['@/pages/Search/SearchResult.vue'], resolve)
       }
     },
     {
       path: '/solution',
       name: 'Solution',
       component: (resolve) => {
-        require(['@/view/Solution/Solution.vue'], resolve)
+        require(['@/pages/Solution/Solution.vue'], resolve)
       }
     },
     {
       path: '/intro',
       name: 'Intro',
       component: (resolve) => {
-        require(['@/view/Intro/Intro.vue'], resolve)
+        require(['@/pages/Intro/Intro.vue'], resolve)
       }
     },
     //域名重定向，默认地址优先显示home页面路径
