@@ -12,13 +12,13 @@
     <meta name="designer" content="xLong">
     <meta name="author" content="xLong">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <!-- 引用百度地图API -->
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <!-- 引用百度地图API，写src=&quot;http://api.map.baidu.com/api?会报警告，把api改成getscript即可解决 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?key=&v=1.1&services=true"></script>
     <style type="text/css">
       /* 取消“百度地图”字样显示 */
       .BMap_cpyCtrl.anchorBL, .BMap_cpyCtrl, .anchorBL{
         display:none;
-        visible:hidden;
+        visibility:hidden;
       }
     </style>
   </head>

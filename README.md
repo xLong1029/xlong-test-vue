@@ -9,6 +9,23 @@
 
 项目用到技术与插件：Vue2.0、Axios、Sass、Vue-Awesome-Swiper。
 
+## 部分项目运行截图
+* 首页界面
+
+![Image text](static/images/screen-1.gif)
+
+* 关于我们\新闻资讯
+
+![Image text](static/images/screen-2.gif)
+
+* 产品中心\联系我们
+
+![Image text](static/images/screen-3.gif)
+
+* 侧边栏\搜索
+
+![Image text](static/images/screen-4.gif)
+
 ## 安装项目依赖包
 $ npm install
 

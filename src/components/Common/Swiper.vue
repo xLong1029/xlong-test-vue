@@ -23,9 +23,7 @@
   export default {
     name: 'awesomeSwiper',
     props: ['swiperSlides'],
-    components: {  
-        swiper
-    },
+    components: { swiper },
     data () {
       return {
         // vue-awesome-swiper 参数及使用方法请查看官方说明 https://surmon-china.github.io/vue-awesome-swiper
