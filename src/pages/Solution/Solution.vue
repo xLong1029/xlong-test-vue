@@ -14,7 +14,7 @@
       <section id="advantage-part">
         <SectionTitle titleCn="我们的优势" titleEng="our advantage"></SectionTitle>
         <ul class="advantage">
-            <li v-for="item in advantage">
+            <li v-for="(item, index) in advantage" :key="index">
                 <img :src="[item.img]"/>
                 <span>{{ item.name }}</span>
             </li>
