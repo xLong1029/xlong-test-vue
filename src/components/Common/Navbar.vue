@@ -10,11 +10,11 @@
         <i class='icon-back'></i>
       </a>
       <!-- 非二级内页，显示搜索图标 -->
-      <a v-else class="button fr" href="/#/search">
+      <router-link v-else class="button fr" to="/search">
           <i class="icon-search"></i>
-      </a>
+      </router-link>
       <div class="title fl">
-          <a class="logo" href="/#/home"></a>
+          <router-link class="logo" to="/home"></router-link>
       </div>      
     </div>
   </header>
