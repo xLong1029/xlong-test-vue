@@ -1,6 +1,10 @@
 // 引入 axios
 import axios from 'axios'
 
+// 解决IE浏览器请求有缓存的问题
+axios.defaults.headers.get['Cache-Control']='no-cache';
+axios.defaults.headers.get['Pragma']='no-cache';
+
 // 数据交互api接口：立即执行函数 (function(){})()，为了不让变量污染全局
 var Api = (() => {
     // 对外接口存储对象
