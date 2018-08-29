@@ -1,5 +1,6 @@
 /*
 功能：nodeJS转发请求实现跨域访问
+作者：xLong(381612175@qq.com)
 时间：2018-8-29
 */
 
@@ -19,6 +20,7 @@ app.all('*', function(req, res, next) {
     next();
 });
 
+// 请求转发
 app.use(function (req, res) {
     var realUrl = 'https://api.douban.com/v2' + req.url.replace('/api','/');
     console.log(realUrl, req.url);
@@ -34,6 +36,7 @@ app.use(function (req, res) {
     })
 });
 
+// 监听服务端口，请求 http://localhost:8090 就相当于请求 https://api.douban.com/v2
 var searver = app.listen(PORT, () => {
     console.log(`Litened At http://localhost:${PORT}`);
 });
