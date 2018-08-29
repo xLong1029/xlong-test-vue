@@ -32,13 +32,13 @@ module.exports = {
     // 这样我们在写url的时候，只用写成/list/1就可以代表api.xxxxxxxx.com/list/1.
     // changeOrigin参数，用于接收一个布尔值，如果设置为true，那么本地会虚拟一个服务端接收你的请求并代你发送该请求，这样就不会有跨域问题了，当然这只适用于开发环境。
     proxyTable: {
-      '/api': {
-        target: 'https://api.douban.com/v2',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/api': ''
-        }
-      }
+      // '/api': {
+      //   target: 'https://api.douban.com/v2',
+      //   changeOrigin: true,
+      //   pathRewrite: {
+      //     '^/api': ''
+      //   }
+      // }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README

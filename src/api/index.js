@@ -2,8 +2,30 @@
 import axios from 'axios'
 
 // 解决IE浏览器请求有缓存的问题
-axios.defaults.headers.get['Cache-Control']='no-cache';
-axios.defaults.headers.get['Pragma']='no-cache';
+axios.defaults.headers.get['Cache-Control'] = 'no-cache';
+axios.defaults.headers.get['Pragma'] = 'no-cache';
+
+// axios.js设置跨域
+// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+// axios.defaults.headers.get['Content-Type'] = 'application/json';
+
+// 请求拦截（配置发送请求的信息）
+axios.interceptors.request.use(function (config){
+		// 处理请求之前的配置
+		return config;
+}, function (error){
+		// 请求失败的处理
+		return Promise.reject(error);
+});
+
+// 响应拦截（配置请求回来的信息）
+axios.interceptors.response.use(function (response){
+		// 处理响应数据
+		return response;
+}, function (error){
+		// 处理响应失败
+		return Promise.reject(error);
+});
 
 // 数据交互api接口：立即执行函数 (function(){})()，为了不让变量污染全局
 var Api = (() => {
@@ -15,7 +37,7 @@ var Api = (() => {
         getNewsList : (vueObj, tag) => {
 					// 获取的是该城市正在热映电影
 					// 详情参见聚合新闻头条API https://developers.douban.com/wiki/?title=movie_v2#in_theaters，
-					axios.get('/api/movie/in_theaters', {
+					axios.get('http://localhost:8090/api/movie/in_theaters', {
 					  params: {
 					    city: '柳州',
 					    start: vueObj.newslist.num,
@@ -64,7 +86,7 @@ var Api = (() => {
         getNewsData : (vueObj) => {
 					// 获取的是电影条目详情
 					// 详情参见聚合新闻头条API https://developers.douban.com/wiki/?title=movie_v2#subject，
-					axios.get('/api/movie/subject/'+vueObj.newsID)
+					axios.get('http://localhost:8090/api/movie/subject/'+vueObj.newsID)
 					// 请求成功
 					.then((result) => {
 	          if(result.data){
@@ -94,7 +116,7 @@ var Api = (() => {
         getCaseList : (vueObj, tag) => {
         	// 获取即将上映的电影海报照
 		      // 详情参见聚合新闻头条API https://developers.douban.com/wiki/?title=movie_v2#in_theaters
-		      axios.get('/api/movie/coming_soon', {
+		      axios.get('http://localhost:8090/api/movie/coming_soon', {
 		          params: {
 		            city: '柳州',
 		            count: vueObj.caselist.num
@@ -143,7 +165,7 @@ var Api = (() => {
         getSearchList : (vueObj) => {
 					// 通过提交的电影类型tag进行数据获取
 					// 详情参见豆瓣API https://developers.douban.com/wiki/?title=movie_v2#search
-					axios.get('/api/movie/search', {
+					axios.get('http://localhost:8090/api/movie/search', {
 					  params: {
 					    tag: vueObj.tag,
 					    start: vueObj.list.num,
@@ -183,7 +205,7 @@ var Api = (() => {
         postMsg : (vueObj) => {
 					// 通过提交的电影类型tag进行数据获取
 					// 详情参见豆瓣API https://developers.douban.com/wiki/?title=movie_v2#search
-					axios.get('/api/movie/search?tag=' + vueObj.txt)
+					axios.get('http://localhost:8090/api/movie/search?tag=' + vueObj.txt)
 					// 请求成功
 					.then((result) => {
 						alert('留言已提交，我们将尽快处理！');

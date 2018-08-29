@@ -1,6 +1,6 @@
 # xlong-test-vue
 
-> test for vue
+> node.js做请求转发测试
 
 
 # 项目说明
