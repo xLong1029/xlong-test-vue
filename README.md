@@ -1,8 +1,5 @@
 # xlong-test-vue
 
-> test for vue
-
-
 # 项目说明
 
 该项目为单页应用测试项目，请勿商用。
